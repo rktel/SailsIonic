@@ -1,0 +1,34 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    
+    <div class="list card">
+      <div class="item item-divider"> <i class="icon ion-plus-circled"></i> PetFriend</div>
+      <div class="item item-body">
+        <div class="list">
+          <li class="item item-input ">
+            <input type="text" placeholder="Pet Name" ng-model="dash.petName">
+            <i class="icon ion-close-circled" ng-show="dash.petName.length"
+            ng-click="dash.petName=''"></i>
+          </li>
+          <button class="button button-block button-dark" ng-click="dash.addPet(dash.petName)">Agregar </button>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="list card">
+      <div class="item item-divider">{{dash.success}}</div>
+      <div class="item item-body">
+        <ul class="list">
+          <li class="item">
+            PetName: <b>{{dash.name}}</b>
+          </li>
+          <li class="item">
+            idStore: <b>{{dash.id}}</b>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
